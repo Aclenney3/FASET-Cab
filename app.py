@@ -4,7 +4,7 @@ import json
 import groupy
 from groupy import Bot, Group, attachments
 
-groupy.config.KEY_LOCATION = "39453642"
+groupy.config.KEY_LOCATION = "575aca101036013673f52f3371bbc364"
 
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
