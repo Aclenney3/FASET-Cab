@@ -4,7 +4,7 @@ import json
 import groupy
 from groupy import Bot, Group, attachments
 
-groupy.config.KEY_LOCATION = "/.groupy.key"
+groupy.config.KEY_LOCATION = "39453642"
 
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -24,8 +24,6 @@ def post():
   msg = data['text']
     if '@all' in msg:
       at_all(bot, group)
-  if 'TypeThis' in msg:
-    bot.post("PostThis")
   return "ok", 200
 
 def at_all(bot, group):
