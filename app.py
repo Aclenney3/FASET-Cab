@@ -19,11 +19,11 @@ def post():
   log('Recieved {}'.format(data))
   gID = data['group_id']
   bot = get_bot(gID)
+  group = get_group(gID)
   # We don't want to reply to ourselves!
-  if data['name'] != bot.name:
-  msg = data['text']
-    if '@all' in msg:
-      at_all(bot, group)
+  if data['name'] != 'Cabinet':
+    if data['text'] == '@all':
+        at_all(bot, group)
   return "ok", 200
 
 def at_all(bot, group):
